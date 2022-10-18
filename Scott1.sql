@@ -175,3 +175,78 @@ where comm is null and ename not like '_L%'
 and job = 'MANAGER' or job = 'CLERK';
 
 
+select 'Welcome',upper('Welcome')
+from dual;
+
+select lower(ename),upper(ename)
+from emp;
+
+select * from emp 
+where ename ='FORD';
+
+select *
+from emp
+where lower(ename) = 'scott';
+
+select ename,length(ename)
+from emp;
+
+select 'Welcome to Oracle',substr('Welcome to Oracle',2,5),substr('Welcome to Oracle',10)
+from dual;
+
+select 'Welcome to Oracle',substr('Welcome to Oracle',-5,6),substr('Welcome to Oracle',-14)
+from dual;
+
+select instr('Welcome to Oracle','o')
+from dual;
+
+select instr('Welcome to Oracle','o',6)
+from dual;
+
+select instr('Welcome to Oracle','e',3,2)
+from dual;
+
+select 'Welcome to Oracle',replace('Welcome to Oracle','to','of')
+from dual;
+
+select 'oracle',lpad('oracle',10,'#2f'),rpad('oracle',10,'@')
+from dual;
+
+select rpad('971018-',14,'*') as 주민번호,
+rpad('010-3689-',13,'*') as 전화번호
+from dual;
+
+select concat(empno,ename),empno||ename
+from emp;
+
+select 
+round(1234.5678),
+round(1234.5678,1),
+round(1234.5678,2),
+round(1234.5678,3),
+round(1234.5678,-1)
+from dual;
+
+select 
+trunc(1234.5678),
+trunc(1234.5678,1),
+trunc(1234.5678,2),
+trunc(1234.5678,3),
+trunc(1234.5678,-1)
+from dual;
+
+select
+ceil(3.14),
+floor(3.14),
+ceil(-3.14),
+floor(-3.14)
+from dual;
+
+
+select mod(5,2),mod(10,4)
+from dual;
+
+select *
+from emp
+where mod(empno,2) = 1;
+
